@@ -14,7 +14,7 @@ let totalWidth = j$(window).width();
 
 setTimeout(() => {
     helloEx.style.display = "block";
-}, 2000)
+}, 7500)
 
 setTimeout(() => {
     j$(function() {
@@ -22,7 +22,7 @@ setTimeout(() => {
         {
         action: 'type',
         strings: [`안녕하세요! 🙌`, `저는 밥값하는 프론트 앤드 강동재 입니다.` , `저의 포트폴리오를 구경하시고 연락주세요~!!`, `gkfl8809@naver.com`],
-        postDelay: 5000
+        postDelay: 7500
         }
     ];
     runScripts(data, 0);
@@ -48,7 +48,7 @@ setTimeout(() => {
             break;
         }
     }
-}, 1200)
+}, 7500)
 
 const mWidth1 = 620;
 const mWidth2 = 480;
@@ -67,13 +67,15 @@ kdongIcon.addEventListener("click", () => {
         duration: 0.5,
         width: 400,
         delay: 0.1,
-        x: -10
+        x: -10,
+        ease: "expo.inOut"
     })
     gsap.to(moreInsta, {
         duration: 0.5,
         height: 620,
         delay: 0.8,
-        y: -10
+        y: -10,
+        ease: "expo.inOut"
     })
 })
 
@@ -83,13 +85,15 @@ moreInstaDot1.addEventListener("click", () => {
         duration: 0.5,
         width: 0,
         delay: 0.8,
-        x: 3
+        x: 3,
+        ease: "expo.inOut"
     })
     gsap.to(moreInsta, {
         duration: 0.5,
         height: 0,
         delay: 0.1,
-        y: 3
+        y: 3,
+        ease: "expo.inOut"
     })
 })
 
@@ -104,10 +108,13 @@ moreInstaDot2.addEventListener("click", () => {
 })
 
 moreInstaDot3.addEventListener("click", () => {
-    moreInsta.style.transition = "all 0.3s";
-    moreInsta.style.transform = "scale(1.5)";
-    moreInsta.style.right = "110px";
-    moreInsta.style.bottom = "160px";
+    const text = confirm("Do you want WORK with Me?");
+
+    if (text === true) {
+        alert("Email : gkfl8809@naver.com");
+    } else {
+        console.log("Email : gkfl8809@naver.com");
+    }
 })
 // } else if ( totalWidth > mWidth1 ){
 //     if(totalWidth < mWidth2){
@@ -127,8 +134,13 @@ moreInstaDot3.addEventListener("click", () => {
 moreInstaDot2.addEventListener("click", () => {
     moreInsta.style.transition = "all 0.3s";
     moreInsta.style.transform = "scale(1)";
-    moreInsta.style.right = "10px";
-    moreInsta.style.bottom = "10px";
+    gsap.to(moreInsta, {
+        scaleX: 1.0,
+        scaleY: 1.0,
+        x: -10,
+        y: -10,
+        ease: "expo.inOut"
+    })
 })
 
 // 아이콘 인스타 슬라이드

@@ -150,7 +150,7 @@ animate() {
 
     // section5
     let scrollTop = document.documentElement.scrollTop || window.pageYOffset || window.scrollY;
-    document.querySelector(".scroll").innerHTML = scrollTop;
+    // document.querySelector(".scroll").innerHTML = scrollTop;
 
     let currentScroll = scrollTop/8;
     const innerW = window.innerWidth;

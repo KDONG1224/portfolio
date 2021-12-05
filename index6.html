@@ -18,7 +18,29 @@
     <link rel='stylesheet' href='https://unpkg.com/swiper@5.2.0/css/swiper.min.css'>
 </head>
 <body>
-    <div class="scroll">0</div>
+    <div class="loader-wrap">
+        <div class="loader__inner">
+            <span class="loader first">Front-End Development </span>
+            <span class="loader second">Front-End Development </span>
+        </div>
+        <div class="loading__bar">    
+            <div class="progress progress-striped">
+                <div class="progress-bar">
+                </div>                       
+            </div> 
+        </div>
+    </div>
+    <!-- //loading -->
+
+    <div class="scroll">
+        <div class="audio">
+            <span class="btn-sound">
+                <i class="fa fa-volume-off" aria-hidden="true"></i>
+                <!-- <i class="fa fa-volume-up" aria-hidden="true"></i> -->
+            </span>
+            <audio id="theme-song" src="assets/audio/ambition.mp3" loop="loop" alt="야망 AMBITION (Feat. ASH ISLAND, 김효은 KEEM HYO-EUN, Hash Swan, CHANGMO) (Prod. TOIL)"></audio>
+        </div>
+    </div>
     <!-- //scroll -->
     
     <div class="kdongIcon"></div>
@@ -67,9 +89,6 @@
                                 </div>
                                 <div class="insta__slider">
                                     <img src="assets/img/main5.jpg" alt="강동재">
-                                </div>
-                                <div class="insta__slider">
-                                    <img src="assets/img/main11.jpg" alt="강동재">
                                 </div>
                                 <div class="insta__slider">
                                     <img src="assets/img/main12.jpg" alt="강동재">
@@ -970,8 +989,8 @@
                 </div>
             </div> -->
             <div class="contact__box">
-                <span class="contact__box__desc">식사는 하셨습니까?</span>
-                <p>밥 <span class="line"></span> 값 하는 프론트 앤드 개발자 강동재 입니다.</p>
+                <span class="contact__box__desc">불꽃처럼 열정이 타오르다!</span>
+                <p>밥 값하는 프론트 엔드 개발자 강동재 였습니다.</p>
             </div>
             <canvas id="canvas"></canvas>
         </footer>
@@ -1049,8 +1068,36 @@
     <script src="assets/js/insta.js"></script>
     <script src="assets/js/fire.js"></script>
     <script src="assets/js/time.js"></script>
-    <script src="assets/js/contact.js"></script>
+    <!-- <script src="assets/js/contact.js"></script> -->
     <script>
+
+        setTimeout(() => {
+            const load = j$(".loader-wrap");
+
+            gsap.to(load, {
+                duration: 0.5,
+                delay: 0.1,
+                y: -1000,
+                ease: "expo.inOut"
+            })
+        }, 5500)
+
+        // audio
+        const btnSound = $(".btn-sound");
+        const themeSong = $("#theme-song")[0];
+
+        btnSound.on("click", function(){
+            $(this).toggleClass("is-playing");
+
+            // audio - play / pause
+            if($(this).hasClass("is-playing")){
+                themeSong.play();
+            } else {
+                themeSong.pause();
+            };
+            
+            $(this).find("i").toggleClass("fa-volume-off fa-volume-up");
+        });
 
         // window.onload = function(){
         //     var browse = navigator.userAgent.toLowerCase(); 
@@ -1076,12 +1123,12 @@
         });
 
         //cursor1
-        const cursor = document.querySelector(".cursor");
+        // const cursor = document.querySelector(".cursor");
 
-        document.getElementById("section9").addEventListener("mousemove", (e) => {
+        // document.getElementById("section9").addEventListener("mousemove", (e) => {
 
-            gsap.to(cursor, {duration: 0.3, left: e.pageX -5, top: e.pageY -5});
-        })
+        //     gsap.to(cursor, {duration: 0.3, left: e.pageX -5, top: e.pageY -5});
+        // })
 
         // swiper
         new Swiper('.swiper-container', {
