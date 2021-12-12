@@ -12,43 +12,43 @@ const moreInstaDot3 = document.querySelector(".insta__top .dot .dot3");
 
 let totalWidth = j$(window).width();
 
-setTimeout(() => {
-    helloEx.style.display = "block";
-}, 7500)
+// setTimeout(() => {
+//     helloEx.style.display = "block";
+// }, 4000)
 
-setTimeout(() => {
-    j$(function() {
-    var data = [
-        {
-        action: 'type',
-        strings: [`안녕하세요! 🙌`, `저는 밥값하는 프론트 앤드 강동재 입니다.` , `저의 포트폴리오를 구경하시고 연락주세요~!!`, `gkfl8809@naver.com`],
-        postDelay: 7500
-        }
-    ];
-    runScripts(data, 0);
-    });
+// setTimeout(() => {
+//     j$(function() {
+//     var data = [
+//         {
+//         action: 'type',
+//         strings: [`안녕하세요! 🙌`, `저는 밥값하는 프론트 앤드 강동재 입니다.` , `저의 포트폴리오를 구경하시고 연락주세요~!!`, `gkfl8809@naver.com 아이콘을 클릭해주세요!!!! ------------->`],
+//         postDelay: 7500
+//         }
+//     ];
+//     runScripts(data, 0);
+//     });
 
-    function runScripts(data, pos) {
-        var prompt = j$('.prompt'),
-            script = data[pos];
-        if(script.clear === true) {
-        j$('.history').html(''); 
-        }
-        switch(script.action) {
-            case 'type':
-            // cleanup for next execution
-            prompt.removeData();
-            prompt.typed({
-                strings: script.strings,
-                typeSpeed: 70
-            });
-            break;
-            case 'view':
+//     function runScripts(data, pos) {
+//         var prompt = j$('.prompt'),
+//             script = data[pos];
+//         if(script.clear === true) {
+//         j$('.history').html(''); 
+//         }
+//         switch(script.action) {
+//             case 'type':
+//             // cleanup for next execution
+//             prompt.removeData();
+//             prompt.typed({
+//                 strings: script.strings,
+//                 typeSpeed: 70
+//             });
+//             break;
+//             case 'view':
 
-            break;
-        }
-    }
-}, 7500)
+//             break;
+//         }
+//     }
+// }, 4000)
 
 const mWidth1 = 620;
 const mWidth2 = 480;
