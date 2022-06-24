@@ -1,3 +1,21 @@
+// var isIos = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+// var isAppIos = /iPhone|iPad|iPod/i.test(navigator.userAgent) && window.webkit && window.webkit.messageHandlers.oasis;
+// var isAndroid = /Android/i.test(navigator.userAgent);
+// var isAppAndroid = /Android/i.test(navigator.userAgent) && window.oasis;
+// var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Apple/i.test(navigator.userAgent);
+// console.log(navigator.userAgent)
+// console.log(/iPhone|iPad|iPod|Apple/i.test(navigator.userAgent))
+
+// window.addEventListener('DOMContentLoaded', () => {
+//     if (/iPhone|iPad|iPod|Apple/i.test(navigator.userAgent)) {
+//         window.open('https://kdong-font-world.web.app/', '_blank');
+//         window.location = 'https://kdong-font-world.web.app/'
+//     }
+//     isMobile ? () => window.open(`https://kdong-font-world.web.app/`, '_self') : () => window.open('https://kdong-font-world.web.app/', '_self');
+// })
+
+
+
 var j$ = jQuery;
 
 // 아이콘 인스타
